@@ -1,0 +1,85 @@
+import fbIcon from "@/assets/icons/facebook-icon.png";
+import twitterIcon from "@/assets/icons/twitter-icon.png";
+import { Box, Container, Stack, Typography } from "@mui/material";
+import Image from "next/image";
+import Link from "next/link";
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  return (
+    <Box bgcolor="rgb(17, 26, 34)" sx={{ color: "secondary.light" }} py={5}>
+      <Container>
+        <Stack direction="row" gap={5} justifyContent="center">
+          <Box>
+            <Stack direction="row" gap={4} justifyContent="center">
+              <Typography color={"text.main"} fontWeight={600} variant="h5">
+                Follow Us on
+              </Typography>
+            </Stack>
+
+            <Stack direction="row" gap={2} justifyContent="center" mb={3}>
+              <Link href="https://www.facebook.com/">
+                <Image src={fbIcon} width={30} height={30} alt="facebook" />
+              </Link>
+              <Link href="https://x.com/">
+                <Image
+                  src={twitterIcon}
+                  width={30}
+                  height={30}
+                  alt="facebook"
+                />
+              </Link>
+            </Stack>
+          </Box>
+
+          <Box>
+            <Stack direction="row" gap={4} justifyContent="center">
+              <Typography color={"text.main"} fontWeight={600} variant="h5">
+                Contact Us at {""}
+              </Typography>
+            </Stack>
+
+            <Stack direction="row" gap={2} justifyContent="center" mb={3}>
+              <Link
+                href="mailto:clashking1545@gmail.com"
+                style={{ textDecoration: "underline", color: "#2AB29F" }}>
+                cbiu@gmail.com
+              </Link>
+            </Stack>
+          </Box>
+        </Stack>
+
+        <Box
+          sx={{
+            border: "1px dashed #B0B0B0",
+          }}></Box>
+
+        <Stack
+          direction="row"
+          gap={2}
+          justifyContent="space-between"
+          alignItems="center"
+          py={3}>
+          <Typography component="p" color="white">
+            &copy;{currentYear} Campus Connect. All Rights Reserved.
+          </Typography>
+          <Typography
+            variant="h4"
+            component={Link}
+            href="/"
+            fontWeight={600}
+            color="text.primary">
+            <Box component="span" color="text.secondary">
+              Campus Connect
+            </Box>{" "}
+          </Typography>
+          <Typography component="p" color="white">
+            Privacy Policy! Terms & Conditions
+          </Typography>
+        </Stack>
+      </Container>
+    </Box>
+  );
+};
+
+export default Footer;
