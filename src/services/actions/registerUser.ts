@@ -18,19 +18,18 @@ import { FieldValues } from "react-hook-form";
 // 	return userInfo;
 // };
 
- 
-
- 
-
 export const registerUser = async (values: FieldValues) => {
-  const res = await fetch("http://localhost:5000/api/register", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(values),
-    cache: "no-store",
-  });
+  const res = await fetch(
+    "https://camps-back-4l3ybxx6q-amitsengupta332s-projects.vercel.app//api/register",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+      cache: "no-store",
+    }
+  );
 
   const data = await res.json();
   return {
@@ -38,6 +37,3 @@ export const registerUser = async (values: FieldValues) => {
     data,
   };
 };
-
-
-

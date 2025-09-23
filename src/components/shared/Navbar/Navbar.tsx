@@ -220,6 +220,16 @@ function NavBar() {
                     <Typography textAlign="center">Found Items</Typography>
                   </Link>
                 </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Link href="/hireTeacher">
+                    <Typography textAlign="center">Hire a Teacher</Typography>
+                  </Link>
+                </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Link href="/buyandsell">
+                    <Typography textAlign="center"> Buy and Sell</Typography>
+                  </Link>
+                </MenuItem>
 
                 <AuthMenuItems handleCloseNavMenu={handleCloseNavMenu} />
               </Menu>

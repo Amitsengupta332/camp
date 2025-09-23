@@ -4,11 +4,11 @@ import { tagTypesList } from "../tag-types";
 
 // Define a service using a base URL and expected endpoints
 export const baseApi = createApi({
-	reducerPath: "api",
-	baseQuery: axiosBaseQuery({
-		// baseUrl: "http://localhost:5000/api/v1"
-		baseUrl: `http://localhost:5000/api`,
-	}),
-	endpoints: () => ({}),
-	tagTypes: tagTypesList,
+  reducerPath: "api",
+  baseQuery: axiosBaseQuery({
+    // baseUrl: "https://camps-back-4l3ybxx6q-amitsengupta332s-projects.vercel.app//api/v1"
+    baseUrl: `https://camps-back-4l3ybxx6q-amitsengupta332s-projects.vercel.app//api`,
+  }),
+  endpoints: () => ({}),
+  tagTypes: tagTypesList,
 });
