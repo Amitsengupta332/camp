@@ -12,12 +12,14 @@ import {
 import Link from "next/link";
 
 const RecentLostItems = async () => {
+  //${process.env.NEXT_BACKEND_HOSTED_LINK}/api/lost-items
  
-  const res = await fetch(`${process.env.NEXT_BACKEND_HOSTED_LINK}/api/lost-items`, {
+  const res = await fetch(`https://camps-back.vercel.app/api/lost-items`, {
     cache: "no-store",
   });
+  console.log(res);
   const data = await res.json();
-  console.log("data", data);
+  // console.log("data", data);
 
   const lostItems = data?.data;
   console.log("lostItems", lostItems);
